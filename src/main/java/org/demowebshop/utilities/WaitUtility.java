@@ -10,64 +10,94 @@ import java.time.Duration;
 public class WaitUtility {
     public static final long PAGE_LOAD_WAIT = 20;
     public static final long EXPLICIT_WAIT = 50;
-    public enum LocatorType{
-        Id,Name,ClassName,Xpath,CssSelector,TagName,LinkText,PartialLinkText;
+
+    public enum LocatorType {
+        Id, Name, ClassName, Xpath, CssSelector, TagName, LinkText, PartialLinkText;
     }
 
-    public void waitForElementToBeVisible(WebDriver driver,String target,Enum locatorType) {
+    public void waitForElementToBeVisible(WebDriver driver, String target, Enum locatorType) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
-        if(locatorType.equals(LocatorType.Id)){
+        if (locatorType.equals(LocatorType.Id)) {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(target)));
-        }
-        if(locatorType.equals(LocatorType.Name)){
+        } else if (locatorType.equals(LocatorType.Name)) {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(target)));
-        }
-        if(locatorType.equals(LocatorType.ClassName)){
+        } else if (locatorType.equals(LocatorType.ClassName)) {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(target)));
-        }
-        if(locatorType.equals(LocatorType.Xpath)){
+        } else if (locatorType.equals(LocatorType.Xpath)) {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(target)));
-        }
-        if(locatorType.equals(LocatorType.CssSelector)){
+        } else if (locatorType.equals(LocatorType.CssSelector)) {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(target)));
-        }
-        if(locatorType.equals(LocatorType.TagName)){
+        } else if (locatorType.equals(LocatorType.TagName)) {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName(target)));
-        }
-        if(locatorType.equals(LocatorType.LinkText)){
+        } else if (locatorType.equals(LocatorType.LinkText)) {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(target)));
-        }
-        if(locatorType.equals(LocatorType.PartialLinkText)){
+        } else if (locatorType.equals(LocatorType.PartialLinkText)) {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText(target)));
         }
     }
 
-    public void WaitToBeElementToClickable(WebDriver driver,String target,Enum locatorType){
-            WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
-            if (locatorType.equals(LocatorType.Id)){
-                wait.until(ExpectedConditions.elementToBeClickable(By.id(target)));
-            }
-            if (locatorType.equals(LocatorType.ClassName)){
-                wait.until(ExpectedConditions.elementToBeClickable(By.className(target)));
-            }
-            if (locatorType.equals(LocatorType.CssSelector)){
-                wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(target)));
-            }
-            if (locatorType.equals(LocatorType.TagName)){
-                wait.until(ExpectedConditions.elementToBeClickable(By.tagName(target)));
-            }
-            if (locatorType.equals(LocatorType.LinkText)){
-                wait.until(ExpectedConditions.elementToBeClickable(By.linkText(target)));
-            }
-            if (locatorType.equals(LocatorType.PartialLinkText)){
-                wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText(target)));
-            }
-            if (locatorType.equals(LocatorType.Xpath)){
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath(target)));
-            }
-            if (locatorType.equals(LocatorType.Name)){
-                wait.until(ExpectedConditions.elementToBeClickable(By.name(target)));
-            }
+    public void WaitToBeElementToClickable(WebDriver driver, String target, Enum locatorType) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+        if (locatorType.equals(LocatorType.Id)) {
+            wait.until(ExpectedConditions.elementToBeClickable(By.id(target)));
+        } else if (locatorType.equals(LocatorType.ClassName)) {
+            wait.until(ExpectedConditions.elementToBeClickable(By.className(target)));
+        } else if (locatorType.equals(LocatorType.CssSelector)) {
+            wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(target)));
+        } else if (locatorType.equals(LocatorType.TagName)) {
+            wait.until(ExpectedConditions.elementToBeClickable(By.tagName(target)));
+        } else if (locatorType.equals(LocatorType.LinkText)) {
+            wait.until(ExpectedConditions.elementToBeClickable(By.linkText(target)));
+        } else if (locatorType.equals(LocatorType.PartialLinkText)) {
+            wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText(target)));
+        } else if (locatorType.equals(LocatorType.Xpath)) {
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath(target)));
+        } else if (locatorType.equals(LocatorType.Name)) {
+            wait.until(ExpectedConditions.elementToBeClickable(By.name(target)));
         }
-
     }
+
+    public void waitToBeElementToBeSelected(WebDriver driver, String target, Enum locatorType) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+        if (locatorType.equals(LocatorType.Id)) {
+            wait.until(ExpectedConditions.elementToBeSelected(By.id(target)));
+        } else if (locatorType.equals(LocatorType.ClassName)) {
+            wait.until(ExpectedConditions.elementToBeSelected(By.className(target)));
+        } else if (locatorType.equals(LocatorType.CssSelector)) {
+            wait.until(ExpectedConditions.elementToBeSelected(By.cssSelector(target)));
+        } else if (locatorType.equals(LocatorType.TagName)) {
+            wait.until(ExpectedConditions.elementToBeSelected(By.tagName(target)));
+        } else if (locatorType.equals(LocatorType.LinkText)) {
+            wait.until(ExpectedConditions.elementToBeSelected(By.linkText(target)));
+        } else if (locatorType.equals(LocatorType.PartialLinkText)) {
+            wait.until(ExpectedConditions.elementToBeSelected(By.partialLinkText(target)));
+        } else if (locatorType.equals(LocatorType.Xpath)) {
+            wait.until(ExpectedConditions.elementToBeSelected(By.xpath(target)));
+        } else if (locatorType.equals(LocatorType.Name)) {
+            wait.until(ExpectedConditions.elementToBeSelected(By.name(target)));
+        }
+    }
+
+
+    public void waitToFrameToBeAvailableAndSwitchToIt(WebDriver driver, String target, Enum locatorType) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+        if (locatorType.equals(LocatorType.Id)) {
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id(target)));
+        } else if (locatorType.equals(LocatorType.ClassName)) {
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.className(target)));
+        } else if (locatorType.equals(LocatorType.CssSelector)) {
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector(target)));
+        } else if (locatorType.equals(LocatorType.TagName)) {
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.tagName(target)));
+        } else if (locatorType.equals(LocatorType.LinkText)) {
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.linkText(target)));
+        } else if (locatorType.equals(LocatorType.PartialLinkText)) {
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.partialLinkText(target)));
+        } else if (locatorType.equals(LocatorType.Xpath)) {
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(target)));
+        } else if (locatorType.equals(LocatorType.Name)) {
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.name(target)));
+        }
+    }
+
+}
