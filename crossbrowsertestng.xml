@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test name="My Demo Webshop Functional Test">
+<suite name="All Test Suite" thread-count="1">
+    <test name="My Demo Web Shop Functional Test">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="org.demowebshop.testscripts.HomePageTest">
+                <methods>
+                    <include name="verifyHomePageTitle"/>
+                </methods>
+            </class>
+            <class name="org.demowebshop.testscripts.LoginPageTest">
+                <methods>
+                    <include name="verifyValidLogin"/>
+                </methods>
+            </class>
+            <class name="org.demowebshop.testscripts.RegisterPageTest">
+                <methods>
+                    <include name="verifyRegistration"/>
+                </methods>
+            </class>
+            <class name="org.demowebshop.testscripts.ShoppingCartPageTest">
+                <methods>
+                    <include name="verifyProductAddedInShoppingCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="My Demo Web shop Non Functional Test" thread-count="1">
+    <parameter name="browser" value="Firefox"/>
         <classes>
             <class name="org.demowebshop.testscripts.HomePageTest">
                 <methods>

@@ -26,10 +26,11 @@ public class Base {
     public WebDriver driver;
     public Properties prop;
     public FileInputStream fs;
+
     public Base() {
         prop = new Properties();
         try {
-            fs = new FileInputStream(System.getProperty("user.dir")+ Constants.CONFIG_FILE);
+            fs = new FileInputStream(System.getProperty("user.dir") + Constants.CONFIG_FILE);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -40,9 +41,9 @@ public class Base {
         }
     }
 
-    public void testInitials(String browser, String url) {
+    public void testInitials(String browser,String url) {
         if (browser.equals("Chrome")) {
-           WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         } else if (browser.equals("Edge")) {
             WebDriverManager.edgedriver().setup();
@@ -64,9 +65,10 @@ public class Base {
     }
 
     @BeforeMethod
-    public void setUp() {
-        String browserName = prop.getProperty("browser");
-        String baseUrl = prop.getProperty("url");
+    @Parameters({"browser"})
+    public void setUp(String browserName) {
+        //String browserName = prop.getProperty("browser");
+       String baseUrl = prop.getProperty("url");
         testInitials(browserName,baseUrl);
     }
 
