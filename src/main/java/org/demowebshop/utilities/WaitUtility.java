@@ -33,6 +33,12 @@ public class WaitUtility {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(target)));
         } else if (locatorType.equals(LocatorType.PartialLinkText)) {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText(target)));
+        } else {
+            try {
+                throw new Exception("Invalid Locator");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -54,6 +60,12 @@ public class WaitUtility {
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath(target)));
         } else if (locatorType.equals(LocatorType.Name)) {
             wait.until(ExpectedConditions.elementToBeClickable(By.name(target)));
+        } else {
+            try {
+                throw new Exception("Invalid Locator");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -75,6 +87,12 @@ public class WaitUtility {
             wait.until(ExpectedConditions.elementToBeSelected(By.xpath(target)));
         } else if (locatorType.equals(LocatorType.Name)) {
             wait.until(ExpectedConditions.elementToBeSelected(By.name(target)));
+        } else {
+            try {
+                throw new Exception("Invalid Locator");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -97,6 +115,12 @@ public class WaitUtility {
             wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(target)));
         } else if (locatorType.equals(LocatorType.Name)) {
             wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.name(target)));
+        } else {
+            try {
+                throw new Exception("Invalid Locator");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
