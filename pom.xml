@@ -60,10 +60,8 @@
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>5.0.9</version>
+            <version>3.0.0</version>
         </dependency>
-
-
     </dependencies>
     <build>
         <plugins>

@@ -1,6 +1,7 @@
 package org.demowebshop.pages;
 
 import org.demowebshop.utilities.TestHelperUtility;
+import org.demowebshop.utilities.WaitUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,6 +39,7 @@ public class HomePage extends TestHelperUtility {
     }
 
     public LoginPage clickOnLoginMenu() {
+        wait.waitForElementToBeVisible(driver,_loginMenu, WaitUtility.LocatorType.Xpath);
         page.clickOnElement(loginMenu);
         return new LoginPage(driver);
     }

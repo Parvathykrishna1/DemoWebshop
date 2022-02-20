@@ -3,6 +3,7 @@ package org.demowebshop.automationcore;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.demowebshop.constants.Constants;
+import org.demowebshop.extentreport.ExtentManager;
 import org.demowebshop.utilities.WaitUtility;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -10,9 +11,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 import java.io.File;
@@ -41,7 +44,7 @@ public class Base {
         }
     }
 
-    public void testInitials(String browser,String url) {
+    public void testInitials(String browser, String url) {
         if (browser.equals("Chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
@@ -64,12 +67,17 @@ public class Base {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(WaitUtility.PAGE_LOAD_WAIT));
     }
 
+    @BeforeSuite
+    public void setExtent(final ITestContext testContext) {
+        ExtentManager.createInstance().createTest(testContext.getName(), "TEST FAILED");
+    }
+
     @BeforeMethod
     @Parameters({"browser"})
     public void setUp(String browserName) {
         //String browserName = prop.getProperty("browser");
-       String baseUrl = prop.getProperty("url");
-        testInitials(browserName,baseUrl);
+        String baseUrl = prop.getProperty("url");
+        testInitials(browserName, baseUrl);
     }
 
     @AfterMethod
