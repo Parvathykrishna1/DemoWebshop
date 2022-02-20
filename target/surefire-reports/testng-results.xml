@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All Test Suite" duration-ms="61184" started-at="2022-02-18T08:03:20 IST" finished-at="2022-02-18T08:04:21 IST">
+    <groups>
+    </groups>
+    <test name="My Demo Web shop Functional Test" duration-ms="61184" started-at="2022-02-18T08:03:20 IST" finished-at="2022-02-18T08:04:21 IST">
+      <class name="org.demowebshop.testscripts.LoginPageTest">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:org.demowebshop.testscripts.LoginPageTest@42d8062c]" name="setUp" is-config="true" duration-ms="7455" started-at="2022-02-18T08:03:36 IST" finished-at="2022-02-18T08:03:43 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyValidLogin()[pri:1, instance:org.demowebshop.testscripts.LoginPageTest@42d8062c]" name="verifyValidLogin" duration-ms="3379" started-at="2022-02-18T08:03:43 IST" finished-at="2022-02-18T08:03:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValidLogin -->
+        <test-method status="PASS" signature="tearDone(org.testng.ITestResult)[pri:0, instance:org.demowebshop.testscripts.LoginPageTest@42d8062c]" name="tearDone" is-config="true" duration-ms="81" started-at="2022-02-18T08:03:46 IST" finished-at="2022-02-18T08:03:47 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyValidLogin status=SUCCESS method=LoginPageTest.verifyValidLogin()[pri:1, instance:org.demowebshop.testscripts.LoginPageTest@42d8062c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDone -->
+      </class> <!-- org.demowebshop.testscripts.LoginPageTest -->
+      <class name="org.demowebshop.testscripts.ShoppingCartPageTest">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:org.demowebshop.testscripts.ShoppingCartPageTest@cb51256]" name="setUp" is-config="true" duration-ms="14361" started-at="2022-02-18T08:04:00 IST" finished-at="2022-02-18T08:04:15 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyProductAddedInShoppingCart()[pri:1, instance:org.demowebshop.testscripts.ShoppingCartPageTest@cb51256]" name="verifyProductAddedInShoppingCart" duration-ms="6351" started-at="2022-02-18T08:04:15 IST" finished-at="2022-02-18T08:04:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductAddedInShoppingCart -->
+        <test-method status="PASS" signature="tearDone(org.testng.ITestResult)[pri:0, instance:org.demowebshop.testscripts.ShoppingCartPageTest@cb51256]" name="tearDone" is-config="true" duration-ms="92" started-at="2022-02-18T08:04:21 IST" finished-at="2022-02-18T08:04:21 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyProductAddedInShoppingCart status=SUCCESS method=ShoppingCartPageTest.verifyProductAddedInShoppingCart()[pri:1, instance:org.demowebshop.testscripts.ShoppingCartPageTest@cb51256] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDone -->
+      </class> <!-- org.demowebshop.testscripts.ShoppingCartPageTest -->
+      <class name="org.demowebshop.testscripts.RegisterPageTest">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:org.demowebshop.testscripts.RegisterPageTest@6043cd28]" name="setUp" is-config="true" duration-ms="11278" started-at="2022-02-18T08:03:47 IST" finished-at="2022-02-18T08:03:58 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyRegistration()[pri:1, instance:org.demowebshop.testscripts.RegisterPageTest@6043cd28]" name="verifyRegistration" duration-ms="2543" started-at="2022-02-18T08:03:58 IST" finished-at="2022-02-18T08:04:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistration -->
+        <test-method status="PASS" signature="tearDone(org.testng.ITestResult)[pri:0, instance:org.demowebshop.testscripts.RegisterPageTest@6043cd28]" name="tearDone" is-config="true" duration-ms="73" started-at="2022-02-18T08:04:00 IST" finished-at="2022-02-18T08:04:00 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyRegistration status=SUCCESS method=RegisterPageTest.verifyRegistration()[pri:1, instance:org.demowebshop.testscripts.RegisterPageTest@6043cd28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDone -->
+      </class> <!-- org.demowebshop.testscripts.RegisterPageTest -->
+      <class name="org.demowebshop.testscripts.HomePageTest">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:org.demowebshop.testscripts.HomePageTest@69a3d1d]" name="setUp" is-config="true" duration-ms="14153" started-at="2022-02-18T08:03:20 IST" finished-at="2022-02-18T08:03:34 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyHomePageTitle()[pri:1, instance:org.demowebshop.testscripts.HomePageTest@69a3d1d]" name="verifyHomePageTitle" duration-ms="1214" started-at="2022-02-18T08:03:34 IST" finished-at="2022-02-18T08:03:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageTitle -->
+        <test-method status="PASS" signature="tearDone(org.testng.ITestResult)[pri:0, instance:org.demowebshop.testscripts.HomePageTest@69a3d1d]" name="tearDone" is-config="true" duration-ms="141" started-at="2022-02-18T08:03:35 IST" finished-at="2022-02-18T08:03:36 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyHomePageTitle status=SUCCESS method=HomePageTest.verifyHomePageTitle()[pri:1, instance:org.demowebshop.testscripts.HomePageTest@69a3d1d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDone -->
+      </class> <!-- org.demowebshop.testscripts.HomePageTest -->
+    </test> <!-- My Demo Web shop Functional Test -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
